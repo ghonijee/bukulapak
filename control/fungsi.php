@@ -168,5 +168,11 @@ function upload($kd_order){
 function updatestatuscheckout($data){
     global $connection;
     $kd_order=$data['kd_order'];
-    mysqli_query($connection,"UPDATE chekout SET status='Sudah Konfirmasi' WHERE kd_order='$kd_order'");
+    mysqli_query($connection,"UPDATE chekout SET status='Sudah Dikonfirmasi' WHERE kd_order='$kd_order'");
+}
+
+function diterima($data){
+    global $connection;
+    $kd_order=$data['kd_order'];
+    mysqli_query($connection,"UPDATE chekout SET status='Sudah Diterima' WHERE kd_order='$kd_order'");
 }
